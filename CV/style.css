@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+  font-size: 2rem;
+}
+
+.banniere {
+  background-color: #9ad3bc;
+  background-image: url('images/back.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: #9ad3bc;
+  clip-path: polygon(5% 0, 100% 0, 96% 100%, 0% 100%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: min-content min-content 1fr;
+  font-size: 3rem;
+}
+
+p {
+  margin: 0;
+}
+
+/* Div contenant la photo*/
+
+.photo {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  border: 0.3rem solid #9ad3bc;
+  content: url('images/avatar.jpg');
+  animation-name: right;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+/*ANIMATION images logo*/
+
+@keyframes right {
+  0% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes left {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes altayeb {
+  0% {
+    opacity: 0.9;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*ANIMATION bannierre*/
+
+header {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5px;
+  margin: 0.5rem;
+  font-weight: bold;
+  color: lightgray;
+}
+
+.identite {
+  position: relative;
+  left: 10rem;
+  background-color: #9ad3bc11;
+  color: lightgray;
+  border-radius: 2rem;
+  height: 15rem;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  background-color: #9ad3bc11;
+  border-bottom: 1px solid #9ad3bc;
+}
+
+.photo {
+  grid-column: 2/3;
+  margin: 0 auto;
+}
+
+.presentation {
+  margin-top:40px;
+  grid-row: 3/-1;
+  grid-column: 2/3;
+  color: lightgray;
+  font-weight: bold;
+  font-style: italic;
+  text-align: justify;
+  line-height: 4rem;
+  animation-name: left;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+.social {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+a {
+  font-size: 6rem;
+  color: #9ad3bc;
+  margin-right: 1rem;
+}
+
+h1 {
+  margin: 20px;
+  text-align: center;
+}
+
+h1 i {
+  color: #9ad3bc;
+  margin-right: 20px;
+}
+
+/* h2 {
+  white-space: nowrap;
+} */
+
+.mlj,
+.pimms,
+.huitclos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30px 150px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 35px auto;
+}
+
+.logo {
+  grid-column: 1/2;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.mlj img {
+  width: 250px;
+}
+.pimms img {
+  width: 200px;
+}
+
+.huitclos img {
+  width: 200px;
+}
+.titreExp {
+  text-align: center;
+  grid-column: 1/-1;
+}
+
+.expe {
+  background-color: #9ad3bc17;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.formation {
+  width: 80%;
+  height: 80vh;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, min-content);
+}
+
+.formation h3{
+  margin-bottom: 20px;
+}
+.simplon {
+  margin: 0 auto;
+}
+.afpa {
+  grid-column: 2/3;
+  margin: 0 auto;
+}
+.afpa img {
+  height: 100px;
+}
+.educ {
+  grid-column: 3/-1;
+  margin: 0 auto;
+}
+img {
+  width: 210px;
+}
+
+button {
+  border: none;
+}
+.formation i {
+  box-shadow: #9ad3bc 2px 0px 3px;
+  background-color: white;
+  font-size: 45px;
+}
+.formation i:active {
+  transform: translateY(-5px);
+
+}
+
+/*ANIMATIONS*/
+
+/*iMAGE*/
+.visible {
+  opacity: 1;
+  animation: left;
+  animation-duration: 2s;
+  animation-delay: 0;
+  animation-timing-function: linear;
+}
+
+/*bANNIERE*/
+.dispa {
+  animation-name: altayeb;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+.disparition {
+  display: none;
+}
+.invisible {
+  display: none;
+}
+
+/*Div formation */
+.click {
+  height: 200px;
+  border: 1px solid green;
+  margin-top: 20px;
+}
+
+.green {
+  color: green;
+}
